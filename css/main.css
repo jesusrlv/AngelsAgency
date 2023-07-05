@@ -96,6 +96,7 @@ a {
 a:active,
 a:hover {
   outline: 0;
+  color: #808080;
 }
 
 abbr[title] {
@@ -7206,7 +7207,7 @@ main .main-scroll > [id^='huge_it_google'] {
 
 @media (min-width: 992px) {
   .nav-list > li > a:hover {
-    color: #1957f3;
+    color: #0e0e0e;
   }
 }
 
@@ -8367,9 +8368,13 @@ p > img {
   overflow: hidden;
   width: 0;
   height: 100%;
-  -webkit-transition: width .6s ease;
+  -webkit-transition: width .9s ease;
   transition: width .6s ease;
-  background-color: blue;
+  background-image:url('../img/logo_nexus.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 50%;
+  background-color: rgb(40, 40, 52);
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
 }
@@ -9192,11 +9197,11 @@ p > img {
 }
 
 .all-atail-projects-category ul a:hover {
-  color: #1957f3;
+  color: #202122;
 }
 
 .all-atail-projects-category ul a.active {
-  color: #1957f3;
+  color: #000000;
 }
 
 .all-atail-projects > div > div {
@@ -11982,7 +11987,7 @@ main .main-scroll > img {
     color: #4d4f54;
   }
   .sides a:hover {
-    color: #1957f3;
+    color: #0e0e0f;
   }
 }
 
