@@ -445,14 +445,23 @@
         twitter: {
             label: "Tweet",
             logo: "fa fa-twitter",
-            shareUrl: "https://twitter.com/share?url={url}&text={text}&via={via}&hashtags={hashtags}",
+            // shareUrl: "https://twitter.com/share?url={url}&text={text}&via={via}&hashtags={hashtags}",
+            shareUrl: "https://twitter.com/",
+            countUrl: ""
+        },
+        instagram: {
+            label: "Instagram",
+            logo: "fa fa-instagram",
+            // shareUrl: "https://twitter.com/share?url={url}&text={text}&via={via}&hashtags={hashtags}",
+            shareUrl: "https://twitter.com/",
             countUrl: ""
         },
 
         facebook: {
             label: "Like",
             logo: "fa fa-facebook",
-            shareUrl: "https://facebook.com/sharer/sharer.php?u={url}",
+            // shareUrl: "https://facebook.com/sharer/sharer.php?u={url}",
+            shareUrl: "https://facebook.com/",
             countUrl: function() {
                 return "https://graph.facebook.com/fql?q=SELECT total_count FROM link_stat WHERE url='" + window.encodeURIComponent(this.url) + "'";
             },
@@ -460,11 +469,18 @@
                 return (data.data.length && data.data[0].total_count) || 0;
             }
         },
-
+        
+        whatsapp: {
+            label: "WhatsApp",
+            logo: "fa fa-whatsapp",
+            shareUrl: "whatsapp://send?text={url} {text}",
+            countUrl: "",
+            shareIn: "self"
+        },
         googleplus: {
             label: "+1",
             logo: "fa fa-google",
-            shareUrl: "https://plus.google.com/share?url={url}",
+            shareUrl: "https://plus.google.com/",
             countUrl: function() {
                 return "https://cors-anywhere.herokuapp.com/https://plusone.google.com/_/+1/fastbutton?url="+ window.encodeURIComponent(this.url);
             },
@@ -476,7 +492,7 @@
         linkedin: {
             label: "Share",
             logo: "fa fa-linkedin",
-            shareUrl: "https://www.linkedin.com/shareArticle?mini=true&url={url}",
+            shareUrl: "https://www.linkedin.com/",
             countUrl: "https://www.linkedin.com/countserv/count/share?format=jsonp&url={url}&callback=?",
             getCount: function(data) {
                 return data.count;
@@ -486,7 +502,7 @@
         pinterest: {
             label: "Pin it",
             logo: "fa fa-pinterest",
-            shareUrl: "https://pinterest.com/pin/create/bookmarklet/?media={media}&url={url}&description={text}",
+            shareUrl: "https://pinterest.com/",
             countUrl: "https://api.pinterest.com/v1/urls/count.json?&url={url}&callback=?",
             getCount: function(data) {
                 return data.count;
@@ -496,20 +512,13 @@
         stumbleupon: {
             label: "Share",
             logo: "fa fa-stumbleupon",
-            shareUrl: "http://www.stumbleupon.com/submit?url={url}&title={title}",
+            shareUrl: "http://www.stumbleupon.com/",
             countUrl:  "https://cors-anywhere.herokuapp.com/https://www.stumbleupon.com/services/1.01/badge.getinfo?url={url}",
             getCount: function(data) {
                 return data.result.views;
             }
         },
 
-        whatsapp: {
-            label: "WhatsApp",
-            logo: "fa fa-whatsapp",
-            shareUrl: "whatsapp://send?text={url} {text}",
-            countUrl: "",
-            shareIn: "self"
-        },
 
         line: {
             label: "LINE",
