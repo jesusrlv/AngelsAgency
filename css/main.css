@@ -284,6 +284,7 @@ th {
 }
 
 @media (min-width: 768px) {
+  
   .container {
     width: 754px;
   }
@@ -7570,7 +7571,7 @@ h2 a {
 
 @media (min-width: 992px) {
   .logo {
-    height: 70px;
+    height: 100%;
     text-align: left;
   }
   .logo.atail-logo-rotate {
@@ -7668,7 +7669,7 @@ h2 a {
 .atail-text-logo {
   line-height: 1;
   display: block;
-  width: 100%;
+  width: 40%;
   height: 100%;
   overflow: hidden;
   padding: 0 20px;
@@ -7686,6 +7687,7 @@ h2 a {
   .atail-text-logo {
     text-align: center;
     height: 70px;
+    width: auto;
     padding: 8px 17px;
   }
   .atail-logo-rotate .atail-text-logo {
@@ -8756,7 +8758,8 @@ p > img {
 
 @media (max-width: 1100px) {
   .preview-article-text {
-    display: none;
+    /* display: none; */
+    width: 50%;
   }
 }
 
